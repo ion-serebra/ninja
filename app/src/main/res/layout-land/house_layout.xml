@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5e7cc"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".House"
+    android:id="@+id/houseLayout">
+
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/button_exit"
+        android:onClick="backToLobby"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        ></ImageView>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/buttonExit"
+        android:layout_toLeftOf="@+id/ItemsRelativeLayout"
+        ></Button>
+
+
+    <RelativeLayout
+        android:id="@+id/ItemsRelativeLayout"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/empty_rect"
+        android:layout_toRightOf="@+id/buttonExit"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="showView"
+        >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="10dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:onClick="showView"
+        android:elevation="0dp"
+        android:scrollbars="vertical"
+        app:stackFromEnd="true"
+        app:reverseLayout="true"
+
+        />
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/ItemsRelativeLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/ImageHelmet"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:background="@drawable/empty_rect"
+            >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ImageArmour"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/empty_rect"
+            android:layout_below="@+id/ImageHelmet"
+            android:layout_marginTop="10dp"
+            android:onClick="putArmor"
+            >
+        </ImageView>
+
+
+        <LinearLayout
+            android:id="@+id/weaponsLayout"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ImageArmour"
+            android:layout_below="@+id/ImageHelmet"
+            android:orientation="vertical"
+            android:weightSum="2"
+
+            >
+        <ImageView
+            android:id="@+id/firstWeapon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/ImageArmour"
+            android:layout_below="@+id/ImageHelmet"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/empty_rect"
+            android:onClick="setFirstWeapon"
+            ></ImageView>
+
+        <ImageView
+            android:id="@+id/secondWeapon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/ImageArmour"
+            android:layout_below="@+id/firstWeapon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/empty_rect"
+            android:onClick="setSecondWeapon"
+            ></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ammunitionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/weaponsLayout"
+            android:layout_below="@id/ImageHelmet"
+            android:weightSum="2"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/empty_rect"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                ></ImageView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/empty_rect"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                ></ImageView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ImageHelmet"
+            android:layout_above="@+id/weaponsLayout"
+            android:layout_toLeftOf="@+id/ammunitionLayout"
+            android:background="@drawable/empty_rect"
+            android:layout_marginLeft="10dp"
+
+            >
+
+
+            <ImageView
+                android:id="@+id/playerWeapon"
+                android:layout_width="110dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="false"
+                android:rotation="90"
+                android:src="@drawable/rubinar_small_up"
+                android:layout_marginLeft="70dp"
+                ></ImageView>
+
+        <ImageView
+
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/hero"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:rotation="90"
+            ></ImageView>
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/armorDescriptionLayout"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ImageArmour"
+            android:layout_centerVertical="true"
+            android:background="@drawable/description_card"
+            android:visibility="invisible"
+            >
+
+
+            <TextView
+                android:id="@+id/armorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="Название оружия"
+                android:gravity="center_horizontal"
+                android:layout_margin="10dp"
+
+                ></TextView>
+
+
+            <TextView
+                android:id="@+id/armorItemType"
+                style="@style/DescriptionHeadStyle"
+                android:text="Тип предмета:"
+                android:layout_below="@+id/armorName"
+                ></TextView>
+
+
+            <TextView
+                android:id="@+id/armorItemTypeValue"
+                style="@style/DescriptionValueStyle"
+                android:text="оружие"
+                android:layout_below="@+id/armorName"
+                android:layout_toRightOf="@+id/armorItemType"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/armorFirstParam"
+                style="@style/DescriptionHeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Урон"
+                android:layout_below="@+id/armorItemType"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/armorFirstParamValue"
+                style="@style/DescriptionValueStyle"
+                android:text="оружие"
+                android:layout_below="@+id/armorItemType"
+                android:layout_toRightOf="@+id/armorFirstParam"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/armorSecondParam"
+                style="@style/DescriptionHeadStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Объём магазина"
+                android:layout_below="@+id/armorFirstParam"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/armorSecondParamValue"
+                style="@style/DescriptionValueStyle"
+                android:text="оружие"
+                android:layout_below="@+id/armorFirstParam"
+                android:layout_toRightOf="@+id/armorSecondParam"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/armorDescription"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                android:text="Информация об оружии
+        Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/armorSecondParam"
+                ></TextView>
+
+
+
+
+
+
+
+            ></RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/weaponDescriptionCard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/ItemsRelativeLayout"
+        android:layout_centerVertical="true"
+        android:background="@drawable/description_card"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/weaponNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:text="Название оружия"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/itemType"
+            style="@style/DescriptionHeadStyle"
+            android:text="Тип предмета:"
+            android:layout_below="@+id/weaponNameTextView"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/itemTypeValue"
+            style="@style/DescriptionValueStyle"
+            android:text="оружие"
+            android:layout_below="@+id/weaponNameTextView"
+            android:layout_toRightOf="@+id/itemType"
+            ></TextView>
+
+        <TextView
+        android:id="@+id/firstParam"
+        style="@style/DescriptionHeadStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Урон"
+        android:layout_below="@+id/itemType"
+        ></TextView>
+
+        <TextView
+            android:id="@+id/firstParamValue"
+            style="@style/DescriptionValueStyle"
+            android:text="оружие"
+            android:layout_below="@+id/itemType"
+            android:layout_toRightOf="@+id/firstParam"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/secondParam"
+            style="@style/DescriptionHeadStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Объём магазина"
+            android:layout_below="@+id/firstParam"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/secondParamValue"
+            style="@style/DescriptionValueStyle"
+            android:text="оружие"
+            android:layout_below="@+id/firstParam"
+            android:layout_toRightOf="@+id/secondParam"
+            ></TextView>
+
+        <TextView
+        android:id="@+id/weaponDescriptionTextView"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        android:text="Информация об оружии
+        Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии
+         Информация об оружии"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/secondParam"
+        ></TextView>
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

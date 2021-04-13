@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="#f5e7cc"
+    tools:context=".Shop">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleX="1.6"
+
+        app:srcCompat="@drawable/shop_back" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:scaleX="1.1"
+
+            app:srcCompat="@drawable/shop_rack" />
+
+
+
+        <LinearLayout
+            android:id="@+id/lineUp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="80dp"
+
+
+            >
+
+
+            <ImageView
+                android:id="@+id/card1image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:onClick="clickCard1"
+
+                >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/card2image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:onClick="clickCard2"
+
+                >
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/card3image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:onClick="clickCard3"
+                >
+            </ImageView>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="338dp"
+
+
+            >
+
+
+            <ImageView
+                android:id="@+id/card4image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:onClick="clickCard4"
+
+                >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/card5image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:onClick="clickCard5"
+
+                >
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/card6image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:onClick="clickCard6"
+                >
+            </ImageView>
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/button_exit"
+        android:onClick="backToLobby"
+
+        ></ImageButton>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#f5e7cc"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="32sp"
+        android:text="GO RIGHT"
+        android:onClick="increaseShopPage"
+        ></Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#f5e7cc"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="32sp"
+        android:text="go left"
+        android:onClick="decreaseShopPage"
+        ></Button>
+
+
+</RelativeLayout>

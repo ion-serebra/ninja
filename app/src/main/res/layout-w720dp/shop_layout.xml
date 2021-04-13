@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="#f5e7cc"
+    tools:context=".Shop">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.6"
+        app:srcCompat="@drawable/shop_back" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/descriptionLayout"
+    android:background="@drawable/empty_rect"
+    android:layout_alignStart="@+id/rack"
+    android:layout_alignEnd="@+id/rack"
+
+    >
+
+    <ImageView
+        android:id="@+id/weaponImage"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
+        android:layout_margin="10dp"
+        ></ImageView>
+
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/weaponImage"
+        android:textColor="@android:color/black"
+
+
+        ></TextView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/description"
+        android:text="Купить"
+        android:onClick="buy"
+       ></Button>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/rack"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="false"
+    android:layout_alignParentBottom="true"
+    android:layout_below="@id/descriptionLayout"
+    >
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleX="1"
+        app:srcCompat="@drawable/shop_rack" />
+
+
+
+    <LinearLayout
+        android:id="@+id/lineUp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="80dp"
+
+
+        >
+
+
+        <ImageView
+            android:id="@+id/card1image"
+            style="@style/ShopWeaponStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:onClick="clickCard1"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/card1text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:text="200$"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/card2image"
+            style="@style/ShopWeaponStyle"
+
+            android:onClick="clickCard2"
+
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/card2text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+
+            android:text="200$"
+            ></TextView>
+
+
+        <ImageView
+            android:id="@+id/card3image"
+            style="@style/ShopWeaponStyle"
+            android:onClick="clickCard3"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/card3text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+
+            android:text="200$"
+            ></TextView>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        >
+
+        <ImageView
+            android:id="@+id/card4image"
+            style="@style/ShopWeaponStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:onClick="clickCard4"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/card4text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+            android:text="200$"
+            ></TextView>
+
+        <ImageView
+            android:id="@+id/card5image"
+            style="@style/ShopWeaponStyle"
+            android:onClick="clickCard5"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/card5text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+            android:text="200$"
+            ></TextView>
+
+
+        <ImageView
+            android:id="@+id/card6image"
+            style="@style/ShopWeaponStyle"
+            android:onClick="clickCard6"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/card6text"
+            style="@style/PriceDollarsStyle"
+            android:layout_width="match_parent"
+            android:text="200$"
+            ></TextView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/button_exit"
+        android:onClick="backToLobby"
+        android:id="@+id/buttonExit"
+
+        ></ImageButton>
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/triangle"
+        android:rotation="90"
+        android:layout_marginRight="30dp"
+        android:stateListAnimator="@null"
+        android:onClick="increaseShopPage"
+        ></Button>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/triangle"
+        android:rotation="-90"
+        android:stateListAnimator="@null"
+        android:onClick="decreaseShopPage"
+        ></Button>
+
+    <TextView
+        style="@style/PriceDollarsStyle"
+        android:id="@+id/dollarsAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 $"
+        android:layout_alignParentRight="true"
+        android:layout_margin="50dp"
+        ></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="armor"
+        android:layout_below="@+id/buttonExit"
+        android:onClick="armourPage"
+        ></Button>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="weapons"
+        android:layout_below="@+id/buttonExit"
+        android:layout_marginTop="50dp"
+        android:onClick="weaponsPage"
+        ></Button>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
